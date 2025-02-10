@@ -1,21 +1,181 @@
-<!doctype html>
-<html lang="zh">
-<head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PolarBear-tech</title>
-</head>
-<body>
-<div>
-    <h1>
-        PolarBear-tech的主页
-    </h1>
-    <br>
-    <p>
-        本人只是一个简简单单的高中生而已。
-    </p>
-</div>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人主页</title>
+    <style>
+        /* 基础重置样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* 全局样式 */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 导航栏样式 */
+        .navbar {
+            background-color: dodgerblue;
+            padding: 10px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px;
+        }
+
+        .navbar a:hover {
+            background-color: #45a049;
+            border-radius: 5px;
+        }
+
+        /* 头部标题样式 */
+        .header {
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .header h1 {
+            margin: 10px 0;
+            font-size: 36px;
+        }
+
+        .header p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        /* 主要内容区域样式 */
+        .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            margin-bottom: 15px;
+        }
+
+        /* 脚注样式 */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+      <h2>个人主页</h2>
+      <nav>
+        <a href="#about">关于我们</a>
+        <a href="#skills">技能</a>
+        <a href="#education">教育</a>
+        <a href="#projects">项目</a>
+      </nav>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="container">
+      <!-- 头部 -->
+      <div class="header">
+        <img src="avatar.jpg" alt="头像" width="94" class="avatar">
+        <h1>PolarBear-tech</h1>
+        <p>爱好编程 & 设计</p>
+      </div>
+
+      <!-- 关于我 -->
+      <div id="about">
+        <div class="card">
+          <h2>关于我</h2>
+          <p>
+            我是一名<strong>高中生</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- 技能 -->
+      <div id="skills">
+        <div class="card">
+          <h2>我的技能</h2>
+          <ul>
+            <li>编程语言: Java, Python, JavaScript.</li>
+            <li>数据库: MySQL.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 教育背景 -->
+      <div id="education">
+        <div class="card">
+          <h2>教育背景</h2>
+          <p>
+            <strong>目前就读于本地高中.</strong>
+          </p>
+        </div>
+      </div>
+
+      <!-- 项目作品 -->
+      <div id="projects">
+        <h2>我的作品</h2>
+        <div class="content">
+          <div class="card">
+            <h3>大型项目暂无</h3>
+            <p>现在正处于学习各种技能的阶段.</p>
+          </div>
+          <div class="card">
+            <h3>我的github账户</h3>
+            <p>
+              <a href="https://github.com/PolarBear-tech">PolarBear-tech</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 脚注 -->
+      <div class="footer">
+        <p>© 2025 PolarBear-tech的个人主页</p>
+      </div>
+    </div>
+  </body>
 </html>
